@@ -1,0 +1,25 @@
+{
+  "name": "robotjs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "board.js",
+  "scripts": {
+    "test": "jest",
+    "test-cc": "jest --coverage",
+    "test-watch": "jest --watchall"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/anthonybchung/robotjs.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/anthonybchung/robotjs/issues"
+  },
+  "homepage": "https://github.com/anthonybchung/robotjs#readme",
+  "devDependencies": {
+    "jest": "^29.0.3"
+  }
+}
