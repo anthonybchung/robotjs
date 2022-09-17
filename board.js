@@ -1,12 +1,12 @@
 class Board {
-  constructor(width, height) {
+  constructor(width = 5, height = 5) {
     this.width = width;
     this.height = height;
   }
 }
 
 class Position {
-  constructor(x, y, face) {
+  constructor(x = 0, y = 0, face = 'NORTH') {
     this.x = x;
     this.y = y;
     this.face = face;
@@ -44,7 +44,7 @@ class Robot {
     this.position.face = newFace[face];
   }
 
-  currentPostion() {
+  report() {
     return this.position;
   }
 
@@ -67,29 +67,10 @@ class Robot {
       this.position.y = newY;
     }
   }
+
+  place(position) {
+    this.position = position;
+  }
 }
 
-const myPos = new Position(0, 0, 'NORTH');
-const myBoard = new Board(5, 5);
-const myRobot = new Robot(myPos, myBoard);
-
-console.log(myRobot.currentPostion());
-myRobot.left();
-myRobot.left();
-console.log(myRobot.currentPostion());
-myRobot.move();
-console.log('result');
-console.log(myRobot.currentPostion());
-myRobot.left();
-myRobot.left();
-console.log(myRobot.currentPostion());
-myRobot.move();
-console.log(myRobot.currentPostion());
-myRobot.right();
-myRobot.move();
-myRobot.move();
-myRobot.move();
-myRobot.move();
-myRobot.move();
-myRobot.move();
-console.log(myRobot.currentPostion());
+module.exports = { Board, Position, Robot };
